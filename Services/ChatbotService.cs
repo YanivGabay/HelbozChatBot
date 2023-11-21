@@ -26,14 +26,29 @@ namespace HelbozChatBot.Services
             {
                 response.Message("יום א-ה - 09:00-20:00, ימי שישי 09:00-13:30", from, _twilioPhoneNumber);
             }
-            else if (body.Contains("חלבון") || body.Contains('2'))
+            else if (body.Contains("מגיעים")&&body.Contains("איך") || body.Contains('2'))
             {
-                response.Message("בטח! מוזמנים להכנס לאתר: www.helboz.co.il", from, _twilioPhoneNumber);
+
+                string wazeLink = "https://bit.ly/HelbozLocation";
+               response.Message("צאלון 21 מודיעין, מודיעין סנטר" +
+                     "\n" +
+                    "אנחנו נמצאים בקומה התחתונה,בחלק השמאלי של המרכז" +
+                    "\n" +
+                    " ליד פיצה רומי ומספרת אקספרס" +
+                      "\n" +
+                    " Waze Link:" +
+                    wazeLink, from, _twilioPhoneNumber);
             }
             // Add more conditions as per your chatbot logic
             else
             {
-                response.Message("היי ברוך הבא לחלבוז:", from, _twilioPhoneNumber);
+                response.Message(" \n היי ברוכים לחלבוז - חלבון זמין,כאן צ'אט בוט חלבוני לשירותכם" +
+                    "\n רשמו בהודעה רק את המספר הרצוי,ותופנו בהתאם:" +
+                    "\n 1 - שעות פתיחה" +
+                    "\n 2 - כתובת והוראות הגעה" +
+                    "\n 3 - נציג אנושי תותח" +
+                    "\n מוזמנים להכנס לאתר שלנו :" +
+                    "www.helboz.co.il", from, _twilioPhoneNumber);
             }
 
             Console.WriteLine($"Received response: {response}");
