@@ -1,5 +1,30 @@
 # HelbozChatBot
 
+First try using c# .net webapi
+and twilio api to create a basic whatsapp chatbot.
+
+you need to register a businses phone number linked in
+meta dev suite, and registered through twilio, but we can
+use:
+ngrok and twilio text sandbox to test it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+small note to myself:
+
+
 had a big problem, with exposing the api key throguh appsettings.json
 through multiply commits
 the problem is , even if you ignore it after, there is still a git history, which 
