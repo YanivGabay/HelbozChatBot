@@ -4,8 +4,14 @@
 This project involved creating a basic WhatsApp chatbot using C# .NET WebAPI and the Twilio API. To facilitate testing before deploying with an actual business phone number linked through Meta Dev Suite and registered with Twilio, I used `ngrok` in conjunction with Twilio's text sandbox.
 
 ### Key Implementation Steps
-- **Twilio and Meta Integration**: You must register a business phone number with Meta and link this number within Twilio.
-- **Local Testing**: Utilize `ngrok` to expose a local server over the internet, making it accessible to Twilio for webhook interactions during the development phase.
+- **SandBox**: use twilio Sandbox without any linking a number to meta, we still need an API key and credit in our account.
+- **Number**: we get a temporary number for 24 hours, than we or other people can send messages to that number, aswell as sending from the server.
+- **Local Testing**: Utilize `ngrok` to expose a local server over the internet, making it accessible to Twilio for webhook interactions.
+
+
+
+
+
 
 ### Security Concern: Exposing API Key in Commit History
 During development, I encountered a significant security issue where the `appsettings.json` file was mistakenly committed to Git, exposing sensitive API keys in the commit history. Here’s how I resolved this issue:
